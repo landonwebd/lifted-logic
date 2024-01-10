@@ -1,0 +1,27 @@
+.content-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 128px 0 128px 50px;
+  max-width: 1070px;
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  .content-block-image {
+    background-position: center;
+    background-size: cover;
+    height: 325px;
+    @media (min-width: 800px) {
+      height: auto;
+    }
+
+  }
+  .content-block-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .content-block-paragraph {
+      color: $gray;
+    }
+  }
+}

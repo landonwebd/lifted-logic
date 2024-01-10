@@ -1,0 +1,18 @@
+.call-out {
+  background: $lightGray; 
+  .call-out-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 48px 24px;
+    @media (min-width: 800px) {
+      width: 568px;
+      padding: 48px 0;
+    }
+    .call-out-paragraph {
+      color: $gray;
+    }
+  }
+}

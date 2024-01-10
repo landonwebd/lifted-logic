@@ -1,0 +1,71 @@
+@mixin atSmall {
+  @media (min-width: 530px) {
+    @content;
+  }
+}
+
+@mixin atSmallMedium {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: 960px) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 700;
+  margin: 0;
+  color: $white
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0;
+  color: $mainBlue;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  margin: 0;
+  color: $mainBlue;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p,
+li {
+  font-size: 16px;
+  font-weight: 400;  
+  line-height: 24px;
+  margin: 0;
+}

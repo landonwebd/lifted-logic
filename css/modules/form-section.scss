@@ -1,0 +1,83 @@
+.form-section{
+  display: grid;
+  grid-template-areas: "form image";
+  grid-template-columns: 1fr;
+  @media (min-width: 800px) {
+    grid-template-columns: 3fr 2fr;
+  }
+  .form-field {
+    grid-area: form;
+    padding: 75px 24px 75px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @media (min-width: 800px) {
+      width: 568px;
+    }
+    .form-paragraph {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      color: $gray;
+      margin-bottom: 24px;
+    }
+    .form-section-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "first-name"
+        "last-name"
+        "email" 
+        "contact"
+        "message"
+        "submit";
+      gap: 24px;
+      @media (min-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+          "first-name last-name"
+          "email contact"
+          "message message"
+          "submit .";
+      }
+      #input-first-name {
+        grid-area: first-name;
+      }
+      #input-last-name {
+        grid-area: last-name;
+      }
+      #input-email {
+        grid-area: email;
+      }
+      #input-contact {
+        grid-area: contact;
+      }
+      #input-message {
+        grid-area: message;
+      }
+      #input-submit {
+        grid-area: submit;
+      }
+      .input-field {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 14px;
+          color: $gray;
+          margin-bottom: 5px;
+        }
+        input, select, textarea {
+          padding: 16px 10px 16px 16px;
+        }
+      }
+    }
+  }
+  .form-image {
+    grid-area: image;
+    display: none;
+    @media (min-width: 900px) {
+      display: block;
+    }
+  }
+}
