@@ -2,10 +2,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  padding: 128px 0 128px 50px;
+  padding: 128px 0;
   max-width: 1070px;
   @media (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
+    padding: 128px 0 128px 50px;
   }
   .content-block-image {
     background-position: center;

@@ -13,6 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/HeroSlider */ "./src/modules/HeroSlider.js");
 /* harmony import */ var _modules_GoogleMap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/GoogleMap */ "./src/modules/GoogleMap.js");
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
+/* harmony import */ var _modules_FormValidation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/FormValidation */ "./src/modules/FormValidation.js");
+
 
 
 
@@ -20,6 +22,61 @@ __webpack_require__.r(__webpack_exports__);
 const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const googleMap = new _modules_GoogleMap__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_3__["default"]();
+const formValidation = new _modules_FormValidation__WEBPACK_IMPORTED_MODULE_4__["default"]();
+
+/***/ }),
+
+/***/ "./src/modules/FormValidation.js":
+/*!***************************************!*\
+  !*** ./src/modules/FormValidation.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class FormValidation {
+  constructor() {
+    this.form = document.querySelector(".form-field");
+    this.errorField = document.querySelector(".error-field");
+    this.submitButton = this.form.querySelector("#input-submit");
+    this.events();
+  }
+  events() {
+    this.submitButton.addEventListener("click", e => this.validateForm(e));
+  }
+  validateForm(e) {
+    let firstName = this.form.querySelector("#first-name").value;
+    let lastName = this.form.querySelector("#last-name").value;
+    let formEmail = this.form.querySelector("#form-email").value;
+    let reasonForContact = this.form.querySelector("#reason-for-contact").value;
+    let errorMessage = "";
+    if (firstName == "") {
+      e.preventDefault();
+      errorMessage += "First name must be filled out<br>";
+    }
+    if (lastName == "") {
+      e.preventDefault();
+      errorMessage += "Last name must be filled out<br>";
+    }
+    if (formEmail == "") {
+      e.preventDefault();
+      errorMessage += "Email must be filled out<br>";
+    }
+    if (reasonForContact == "") {
+      e.preventDefault();
+      errorMessage += "Please select a reason for contact<br>";
+    }
+    if (errorMessage != "") {
+      this.errorField.classList.remove("hide");
+      this.errorField.innerHTML = errorMessage;
+      return false;
+    }
+    return;
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormValidation);
 
 /***/ }),
 

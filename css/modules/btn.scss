@@ -17,6 +17,11 @@
   outline: none;
   text-align: center;
   &:hover {
-    border: 2px solid $mainGreen;
+    animation: color_change 0.5s linear forwards;
   }
+}
+
+@keyframes color_change {
+	0% { background-color: $paleGreen; color: $mainGreen; }
+	100% { background-color: $paleBlue; color: $white; }
 }

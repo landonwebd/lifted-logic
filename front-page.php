@@ -30,7 +30,6 @@
       </a>
     </div>
   </div>
-  
 </div>
 
 <div class="container">
@@ -123,21 +122,22 @@
   <div class="form-field">
     <h3><?php echo $formTitle; ?></h3>
     <span class="form-paragraph"><?php echo $formParagraph; ?></span>
+    <span class="error-field hide"></span>
     <form action="" method="" class="form-section-form">
       <div class="input-field" id="input-first-name">
-        <label for="first-name">First Name</label>
+        <label for="first-name">First Name*</label>
         <input type="text" id="first-name" name="first-name" placeholder="First Name">
       </div>
       <div class="input-field" id="input-last-name">
-        <label for="last-name">Last Name</label>
+        <label for="last-name">Last Name*</label>
         <input type="text" id="last-name" name="last-name" placeholder="Last Name">
       </div>
       <div class="input-field" id="input-email">
-        <label for="form-email">Email</label>
+        <label for="form-email">Email*</label>
         <input type="email" name="form-email" id="form-email" placeholder="Email">
       </div>
       <div class="input-field" id="input-contact">
-        <label for="reason-for-contact">Reason for Contacting</label>
+        <label for="reason-for-contact">Reason for Contacting*</label>
         <select name="reason-for-contact" id="reason-for-contact">
           <option value="">Select One</option>
           <option value="1">1</option>
