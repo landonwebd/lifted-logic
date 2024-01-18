@@ -2,7 +2,7 @@
 <div class="container" style="margin: 200px auto;">
   <p>Because I couldn't stop thinking about this exercise, I knew I had to solve it. Plus, it gave
   me an opportunity for one of those 'WooHoo Moments!'<p>
-  <p>Here is what I came up with. I've also added this file to my git repository.</p>
+  <p>Here is what I came up with. I've also added this file to my git repository @ https://github.com/landonwebd/lifted-logic.</p>
   <pre>
   $phpArray = array("Johnny", "Billy", "Landon", "Aaron", "Steve", "Aaron", "Landon", 
   "Billy", "Kyle", "Samantha", "Janelle", "Aaron", "Alaine", "Claire", "Joney", "Megan", 
